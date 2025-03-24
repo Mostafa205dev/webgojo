@@ -12,6 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: aqua;
+    width: 100%;
     border: 4px solid rgb(122, 114, 114); 
     position: relative;
 }
@@ -22,30 +23,31 @@ body {
     display: flex;
     gap: 50px;
     margin-left: 50px;
-    
 }
-.heads div a,.heads div{
-    font-size: 18px;
-    color: white;
-    display: inline-block;
+.heads div{
+    text-align: center;
+    width: 80px;
+    border: 3px solid violet;
     box-shadow: 1px 1px 15px aqua,
                 1px 1px 15px red,
                 1px 1px 15px blue,
                 1px 1px 15px green;
-        
-    border: 3px solid violet;
-    box-sizing: border-box;
-    text-decoration:none;
-    border-radius: 25px;
-    transition: 0.3s 0.3s transform; 
 
-   
+    border-radius: 25px;
+}
+.heads div a{ 
+    
+    font-size: 18px;
+    color: white;
+    text-decoration:none;
+    transition: 0.3s 0.3s transform; 
 } 
-.heads div a:hover{
-    background-color: aqua;
+.heads div:hover{
+    
     color: black;
-    transform: translate(-10px,10px);
+    transform: scale(1.2);
 } 
+
 
 .search{
     border: 2px solid ;
@@ -67,7 +69,7 @@ body {
 }
 
 
-/* content */
+/* first row content */
 .content{
     
     display: flex;
@@ -109,32 +111,183 @@ body {
 }
 
 .frontpage{
+    margin-top: 3%;
+    margin-left: 20%;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px cyan,
+                1px 1px 20px cyan;
+    border-radius: 25%;
+    width: 250px;
+    height: 380px;
+    perspective: 500px; 
+    position: relative;
+}
+.cardface, .cardback {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; 
+    transition: transform 0.6s;
+    border-radius: 25%;
+    
+}
+.cardface{
     background-image: url("cardsatoru.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-top: 3%;
-    margin-left: 20%;
-    width: 250px;
-    height: 380px;
-    background-color: aliceblue;
+}
+.cardback{ 
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("gojo1.jpeg");
+    transform: rotateY(-180deg); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.frontpage:hover .cardface{
+    transform: rotatey(180deg);   
+}
+.frontpage:hover .cardback{
+    transform: rotatey(0);   
+}
+
+.cardback h1{
+    padding-top: 30px ;
     color: aqua;
-    transform-style: preserve-3d;
-    transition: 1s 0.3s transform;
-    cursor: pointer;
-    border: 1px solid white;
-    box-shadow: 1px 1px 15px aqua,
-                1px 1px 15px red,
-                1px 1px 15px blue,
-                1px 1px 15px green;
-    border-radius: 25%;
+    transform: translate(15%);
+}
+.cardbacktalk{
+    font-weight: bold;
+    padding-top: 70px ;
+    color: aqua;
+    transform: translate(15%);
+}
+
+/* 2th row content */
+.cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(25, 30, 30);
     position: relative;
 }
-.cardtitle{
+
+.card1 ,.card2,.card3{
+    width: 100px;
+    height: 100px;
+    perspective: 500px; 
     position: relative;
-    left: 24%;
 }
-.frontpage:hover{
-    transform: rotatey(360deg);   
-      
+
+.face1, .back1 ,.face2, .back2,.face3, .back3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back face until flipped */
+    transition: transform 0.6s;
 }
+
+.face1 {
+    background-image: url("instgram.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back1 {
+    background-color: white;
+    color: black;
+    transform: rotateY(-180deg); 
+}
+.card1:hover .face1 {
+    transform: rotateY(180deg);
+}
+
+.card1:hover .back1 {
+    transform: rotateY(0deg); 
+}
+
+
+
+
+.face2 {
+    background-image: url("whatsapp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back2 {
+    background-color: white;
+    font-size: 14px;
+    transform: rotateY(-180deg); 
+}
+
+.card2:hover .face2 {
+    transform: rotateY(180deg);
+}
+
+.card2:hover .back2 {
+    transform: rotateY(0deg); 
+}
+
+
+
+.face3 {
+    background-image: url("facebook.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back3 {
+    background-color: white;
+    font-size: 14px;
+    transform: rotateY(-180deg); 
+
+}
+
+.card3:hover .face3 {
+    transform: rotateY(180deg);
+}
+
+.card3:hover .back3 {
+    transform: rotateY(0deg); 
+}
+
+
+
+
+
+
+
+
+
+/* traning */ 
+.big{
+    display: flex;
+   
+}
+.tran1,.tran2,.tran3{
+    margin: 100px;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid red;
+    border-left-color:transparent ;
+    animation: tran 0.5s infinite alternate;
+}
+.tran2{
+    animation-delay: 0.3s;
+}
+.tran3{
+    animation-delay: 0.6s;
+}
+
+@keyframes tran{
+    
+    to {
+        opacity: 0.2;
+        transform: translateY(50px);
+    }
+}
+
+
