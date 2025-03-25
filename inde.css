@@ -291,8 +291,11 @@ body {
 }
 
 
-@media (max-width:767px){
-
+@media (max-width: 767px) { 
+    .header { flex-direction: column; text-align: center; }
+    .heads { flex-direction: column; gap: 10px; }
+    .content { flex-direction: column; align-items: center; }
+    .frontpage { width: 80%; height: auto; }
 }
 
 @media (min-width:768px){
