@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("/photos/1.jpg");
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("1.jpg");
     background-position: center;
     background-size: cover;
     height: 1000px;
@@ -138,7 +138,7 @@ body {
     background-size: cover;
 }
 .cardback{ 
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("/photos/gojo1.jpeg");
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("gojo1.jpeg");
     transform: rotateY(-180deg); 
     background-repeat: no-repeat;
     background-position: center;
@@ -189,7 +189,7 @@ body {
 }
 
 .face1 {
-    background-image: url("/photos/instgram.jpeg");
+    background-image: url("instgram.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -211,7 +211,7 @@ body {
 
 
 .face2 {
-    background-image: url("/photos/whatsapp.jpeg");
+    background-image: url("whatsapp.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -232,7 +232,7 @@ body {
 
 
 .face3 {
-    background-image: url("/photos/facebook.jpeg");
+    background-image: url("facebook.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -291,3 +291,18 @@ body {
 }
 
 
+@media (max-width:767px){
+
+}
+
+@media (min-width:768px){
+
+}
+
+@media (min-width:992px){
+
+}
+
+@media (min-width:1200px){
+
+}
